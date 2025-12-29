@@ -3,7 +3,7 @@ Limpeza e Tratamento de Dados para Machine Learning
 
 Um site interativo e visualmente impressionante para aprender técnicas de data cleaning
 focadas em análise de churn de clientes. Tudo com design Cyberpunk Azul Neon e
-explicações em dois níveis: técnico e simpli cado (ELI12). O Que é Este Projeto?
+explicações em dois níveis: técnico e simplicado (ELI12). O Que é Este Projeto?
 
 Este é um site educacional completo em um único arquivo HTML5, ideal para quem
 quer aprender como limpar, tratar e preparar dados para modelos de machine learning.
