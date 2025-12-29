@@ -7,8 +7,7 @@ explicações em dois níveis: técnico e simplicado (ELI12). O Que é Este Proj
 
 Este é um site educacional completo em  HTML5,css3 e js ideal para quem
 quer aprender como limpar, tratar e preparar dados para modelos de machine learning.
-As anotações foram extraídas de um curso pro ssional, reformuladas para ser autorais, e
-apresentadas em um formato super legal com:
+
 ✅
 Design moderno e futurista com tema cyberpunk neon
 ✅
