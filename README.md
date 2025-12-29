@@ -79,13 +79,10 @@ Mac: clique direito
 Navegador
 Linux: abrir com seu navegador favorito
 Opção 2: Com Servidor Local
-Se quiser usar com um servidor local (mais pro ssional):
-Python 3
-python -m http.server 8000
-Depois acesse:
-http://localhost:8000/index.html
+Se quiser usar com um servidor local:Python 3python -m http.server 8000 Depois acesse: http://localhost:8000/index.html
 Opção 3: Separar em Múltiplos Arquivos
 Se preferir um projeto mais modular:
+
 Crie três arquivos:
 index.html (copie o HTML da tag <head> até </html>)
 style.css (copie tudo entre as tags ...)
