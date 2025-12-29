@@ -60,38 +60,7 @@ Animações suaves ao hoverar elementos
 Scrollbar customizada no tema neon
 Totalmente responsivo — vira tudo que precisa em telas menores
 
-Como Usar
-1. Clique nos cards para abrir uma lição
-2. Toggle entre Técnico e ELI12 para mudar a forma de explicação
-3. Navegue pelo menu para ir para outras seções
-4. Use o botão Tema para alternar (salva sua preferência)
-   
-Como Usar Este Arquivo
-Opção 1: Super Simples (Recomendado)
-Basta baixar o arquivo index.html e abrir
-no navegador
-Não precisa instalar nada!
-Windows: clique duas vezes em index.html
-Mac: clique direito 
-→
- Abrir com 
-→
-Navegador
-Linux: abrir com seu navegador favorito
-Opção 2: Com Servidor Local
-Se quiser usar com um servidor local:Python 3python -m http.server 8000 Depois acesse: http://localhost:8000/index.html
-Opção 3: Separar em Múltiplos Arquivos
-Se preferir um projeto mais modular:
 
-Crie três arquivos:
-index.html (copie o HTML da tag <head> até </html>)
-style.css (copie tudo entre as tags ...)
-script.js (copie tudo entre as tags ...)
-No index.html, substitua:
-... 
-→
- ... 
-→
 Tecnologias Usadas
 HTML5 — Estrutura semântica completa
 CSS3 — Animações, gradientes e efeitos neon
