@@ -59,11 +59,13 @@ Efeitos neon em borders e botões que brilham
 Animações suaves ao hoverar elementos
 Scrollbar customizada no tema neon
 Totalmente responsivo — vira tudo que precisa em telas menores
+
 Como Usar
 1. Clique nos cards para abrir uma lição
 2. Toggle entre Técnico e ELI12 para mudar a forma de explicação
 3. Navegue pelo menu para ir para outras seções
 4. Use o botão Tema para alternar (salva sua preferência)
+   
 Como Usar Este Arquivo
 Opção 1: Super Simples (Recomendado)
 Basta baixar o arquivo index.html e abrir
@@ -135,8 +137,8 @@ Cada lição abre em um modal elegante com:
 Conteúdo técnico detalhado
 Explicação simpli cada (ELI12)
 Toggle fácil entre as duas versões
-Botão fechar suave com 
-✕
+Botão fechar suave com ✕
+
 Sistema de Temas
 Tema escuro (padrão) — perfeito para estudar à noite
 Salva sua preferência em localStorage
