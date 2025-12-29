@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpeza e Tratamento de Dados para ML - Churn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">⚡ ML CHURN</div>
+        <ul class="nav-menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#modulos">Módulos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 Tema</button>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+    <div class="header-content">
+        <h1>Limpeza e Tratamento de Dados</h1>
+        <p>Para Machine Learning & Análise de Churn</p>
+        <div class="header-subtitle">
+            Aprenda técnicas profissionais de data cleaning com explicações técnicas e simplificadas
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main id="modulos">
+    <section class="section">
+        <h2 class="section-title">📚 Módulos de Aprendizado</h2>
+        <div class="cards-container">
+            <div class="card" onclick="openModal('churn')">
+                <div class="card-content">
+                    <h3>🔄 O que é Churn?</h3>
+                    <p>Entenda o conceito fundamental de taxa de cancelamento de clientes e sua importância estratégica nos negócios.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('ml_fundamentals')">
+                <div class="card-content">
+                    <h3>🤖 Machine Learning Basics</h3>
+                    <p>Fundamentos essenciais de algoritmos de aprendizado de máquina e suas aplicações práticas.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('dados_json')">
+                <div class="card-content">
+                    <h3>📄 Dados JSON & Normalização</h3>
+                    <p>Como ler arquivos JSON complexos e transformá-los em estruturas tabulares eficientes.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('tipo_dados')">
+                <div class="card-content">
+                    <h3>⚙️ Tipos de Dados & Casting</h3>
+                    <p>Conversão segura de tipos de dados e tratamento de valores inválidos em datasets.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('valores_unicos')">
+                <div class="card-content">
+                    <h3>🔍 Análise de Valores Únicos</h3>
+                    <p>Exploração e distribuição de valores para identificar padrões e anomalias nos dados.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('duplicados')">
+                <div class="card-content">
+                    <h3>🔗 Remoção de Duplicatas</h3>
+                    <p>Identificação e eliminação de registros redundantes para melhorar qualidade do modelo.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('valores_nulos')">
+                <div class="card-content">
+                    <h3>⬜ Tratamento de Nulos</h3>
+                    <p>Estratégias eficazes para lidar com valores ausentes e preservar integridade dos dados.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openModal('outliers')">
+                <div class="card-content">
+                    <h3>📊 Detecção de Outliers</h3>
+                    <p>Identifique e analise valores extremos usando métodos estatísticos como Box Plot.</p>
+                    <button class="view-btn">Ver Aula</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- MODALS -->
+<div id="churn" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>O que é Churn?</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('churn', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('churn', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="churn-tecnico" class="content-text active">
+            <h3>Definição Técnica</h3>
+            <p>Churn refere-se à taxa de cancelamento de clientes em um período determinado, representando a porcentagem de usuários que deixam de utilizar um produto ou serviço. Este é um indicador crítico de saúde financeira e desempenho empresarial, pois correlaciona-se diretamente com:</p>
+            <ul>
+                <li><strong>Perda de receita:</strong> Quanto maior o churn, maior a perda financeira</li>
+                <li><strong>Indicador de satisfação:</strong> Alta taxa sugere insatisfação com produtos/serviços</li>
+                <li><strong>Desempenho competitivo:</strong> Indica capacidade de retenção de clientes</li>
+            </ul>
+            <h3>Estratégias de Redução</h3>
+            <ul>
+                <li>Melhorar qualidade de produtos</li>
+                <li>Oferecer suporte técnico excepcional</li>
+                <li>Implementar programas de fidelização</li>
+                <li>Realizar análises preditivas</li>
+            </ul>
+        </div>
+        <div id="churn-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>Churn é quando clientes param de usar um serviço. Imagina que você tem uma loja de doces e todos os dias alguns clientes deixam de vir. Isso é churn!</p>
+            <p>Quanto mais clientes saem, menos dinheiro você ganha. Se muita gente está saindo, significa que algo está errado com seus doces ou atendimento.</p>
+            <p>Para evitar isso, você pode:</p>
+            <ul>
+                <li>Fazer doces mais gostosos</li>
+                <li>Ser mais legal com o cliente</li>
+                <li>Dar prêmios para quem volta sempre</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="ml_fundamentals" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Fundamentos de Machine Learning</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('ml_fundamentals', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('ml_fundamentals', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="ml_fundamentals-tecnico" class="content-text active">
+            <h3>Conceito Fundamental</h3>
+            <p>Machine Learning é uma tecnologia que permite que computadores aprendam a realizar tarefas específicas sem serem explicitamente programados. Os modelos são criados através de algoritmos que:</p>
+            <ul>
+                <li>Analisam dados históricos</li>
+                <li>Identificam padrões e relações</li>
+                <li>Criam representações matemáticas</li>
+                <li>Fazem previsões em novos dados</li>
+            </ul>
+            <h3>Aplicações Práticas</h3>
+            <ul>
+                <li>Detecção de fraudes</li>
+                <li>Reconhecimento de voz/imagem</li>
+                <li>Diagnóstico médico</li>
+                <li>Sistemas de recomendação</li>
+            </ul>
+            <h3>Importância para Previsão de Churn</h3>
+            <p>Um modelo preditivo de churn identifica clientes em risco de cancelamento, permitindo ações proativas como ofertas personalizadas, melhorias de serviço direcionadas e estratégias de retenção focadas.</p>
+        </div>
+        <div id="ml_fundamentals-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>Machine Learning é como ensinar um robô a aprender sozinho.</p>
+            <p>Imagina que você mostrar 100 exemplos de gatos e cães para um computador. Depois de ver muitos, ele consegue identificar sozinho se uma nova foto é de gato ou cão, sem alguém ter ensinado exatamente as regras!</p>
+            <p>O computador aprende com exemplos e depois consegue fazer coisas novas.</p>
+        </div>
+    </div>
+</div>
+
+<div id="dados_json" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Leitura e Normalização de Dados JSON</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('dados_json', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('dados_json', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="dados_json-tecnico" class="content-text active">
+            <h3>Problema dos Dados Aninhados</h3>
+            <p>Dados complexos frequentemente vêm em formato JSON aninhado, apresentando estruturas hierárquicas que são ineficientes para análise direta.</p>
+            <h3>Processo de Normalização</h3>
+            <ul>
+                <li>Leitura do arquivo JSON usando json.load()</li>
+                <li>Aplicação de pd.json_normalize() para transformar estruturas aninhadas</li>
+                <li>Expansão de chaves aninhadas em colunas separadas</li>
+                <li>Uso de parâmetros como record_path e meta para organizar dados</li>
+            </ul>
+            <h3>Exemplo Prático</h3>
+            <p>Um objeto JSON com <code>"cliente": {"genero": "masculino", "idoso": 0}</code> é normalizado em colunas <code>"cliente.genero"</code> e <code>"cliente.idoso"</code>, permitindo análise eficiente em DataFrames.</p>
+        </div>
+        <div id="dados_json-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>JSON é um formato de dados que parece um armário dentro de outro armário.</p>
+            <p>Por exemplo:</p>
+            <ul>
+                <li>Armário 1: Dados do cliente
+                    <ul>
+                        <li>Dentro tem: gênero, idade</li>
+                        <li>Dentro da idade tem: valor</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>O Python consegue "abrir" todos esses armários e colocar as informações em uma tabela bem organizada. Assim é muito mais fácil trabalhar!</p>
+        </div>
+    </div>
+</div>
+
+<div id="tipo_dados" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Tipos de Dados & Casting</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('tipo_dados', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('tipo_dados', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="tipo_dados-tecnico" class="content-text active">
+            <h3>Importância de Tipos Corretos</h3>
+            <p>Tipos de dados corretos são fundamentais para modelos de ML. O processo inclui:</p>
+            <ul>
+                <li>Identificação de tipos incorretos usando .info()</li>
+                <li>Conversão de tipos usando .astype()</li>
+                <li>Tratamento de valores inválidos que impedem conversão</li>
+                <li>Validação de coerência (ex: valores monetários como float)</li>
+            </ul>
+            <h3>Benefícios</h3>
+            <ul>
+                <li><strong>Precisão:</strong> Dados mal tipados levam a cálculos incorretos</li>
+                <li><strong>Velocidade:</strong> Tipos corretos otimizam computação</li>
+                <li><strong>Compatibilidade:</strong> Algoritmos ML requerem tipos específicos</li>
+                <li><strong>Prevenção de erros:</strong> Evita exceções durante treinamento</li>
+            </ul>
+        </div>
+        <div id="tipo_dados-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>Tipos de dados são como dizer ao computador: "isso é um número" ou "isso é um texto".</p>
+            <p>Se você disser que R$ 100,00 é texto, o computador não consegue somar. Precisa saber que é um número!</p>
+            <p>Às vezes, os dados chegam errados. Por exemplo, uma coluna tem valores em branco. Aí você precisa consertar antes o computador aceitar.</p>
+        </div>
+    </div>
+</div>
+
+<div id="valores_unicos" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Análise de Valores Únicos</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('valores_unicos', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('valores_unicos', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="valores_unicos-tecnico" class="content-text active">
+            <h3>Exploração de Dados</h3>
+            <p>A exploração de valores únicos em cada coluna revela:</p>
+            <ul>
+                <li>Distribuição de categorias (usando .unique() e .value_counts())</li>
+                <li>Dados estranhos ou outliers</li>
+                <li>Inconsistências de nomenclatura</li>
+                <li>Padrões não-óbvios</li>
+            </ul>
+            <h3>Metodologia</h3>
+            <ul>
+                <li>Iterar sobre colunas</li>
+                <li>Exibir valores únicos</li>
+                <li>Analisar frequência de cada valor</li>
+                <li>Identificar anomalias (strings vazias, valores nulos)</li>
+            </ul>
+        </div>
+        <div id="valores_unicos-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>É como fazer uma contagem rápida.</p>
+            <p>Você tem uma coluna com "Sim" e "Não". Ao usar value_counts(), o Python te diz: 5000 pessoas disseram "Sim" e 3000 disseram "Não".</p>
+            <p>Também descobre valores estranhos, como alguém ter escrito "talvez" quando deveria ser só "Sim" ou "Não".</p>
+        </div>
+    </div>
+</div>
+
+<div id="duplicados" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Identificação e Remoção de Duplicatas</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('duplicados', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('duplicados', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="duplicados-tecnico" class="content-text active">
+            <h3>Problemas Causados por Duplicatas</h3>
+            <p>Dados duplicados prejudicam modelos de ML por:</p>
+            <ul>
+                <li><strong>Viés:</strong> Amostras repetidas ganham peso desproporcional</li>
+                <li><strong>Desperdício:</strong> Processamento de dados redundantes</li>
+                <li><strong>Redução de qualidade:</strong> Informações não-únicas inflacionam importância</li>
+            </ul>
+            <h3>Processo de Limpeza</h3>
+            <ul>
+                <li>Detecção: <code>dados.duplicated()</code> retorna series booleana</li>
+                <li>Contagem: <code>.sum()</code> quantifica duplicatas</li>
+                <li>Visualização: Filtrar com filtro_duplicadas</li>
+                <li>Remoção: <code>drop_duplicates(inplace=True)</code></li>
+            </ul>
+        </div>
+        <div id="duplicados-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>Duplicados são cópias repetidas de dados. Como ter o mesmo cliente listado 2 vezes.</p>
+            <p>Se você treina um modelo vendo o mesmo cliente 2 vezes, o modelo acha que esse cliente é muito importante. Mas ele só aparece uma vez na realidade!</p>
+            <p>Por isso removemos cópias, para o modelo aprender corretamente.</p>
+        </div>
+    </div>
+</div>
+
+<div id="valores_nulos" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Tratamento de Valores Nulos</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('valores_nulos', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('valores_nulos', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="valores_nulos-tecnico" class="content-text active">
+            <h3>Desafios com Valores Nulos</h3>
+            <p>Valores nulos (NaN) criam desafios significativos em análise de dados.</p>
+            <h3>Estratégias de Tratamento</h3>
+            <ul>
+                <li><strong>Detecção:</strong> <code>.isna()</code> retorna booleano por célula</li>
+                <li><strong>Análise:</strong> Identificar padrões e causas de valores nulos</li>
+                <li><strong>Preenchimento:</strong> Valores frequentes (média, mediana, moda)</li>
+                <li><strong>Remoção:</strong> Quando dado não é recuperável</li>
+            </ul>
+            <h3>Caso Específico</h3>
+            <p>Para <code>cliente.tempo_servico</code>: Valores nulos podem ser inferidos multiplicando <code>conta.cobranca.total / conta.cobranca.mensal</code></p>
+            <p>Para <code>conta.contrato</code>: Sem análise especializada, recomenda-se remoção daquela amostra.</p>
+        </div>
+        <div id="valores_nulos-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>Valores nulos são espaços em branco nos dados. Como se alguém preenchesse um formulário mas esquecesse de preencher alguns campos.</p>
+            <p>Você pode:</p>
+            <ul>
+                <li>Deixar em branco (o computador ignora)</li>
+                <li>Preencher com uma resposta padrão</li>
+                <li>Deletar aquela linha inteira</li>
+            </ul>
+            <p>A melhor escolha depende de quanto dado você tem e quão importante é aquela informação.</p>
+        </div>
+    </div>
+</div>
+
+<div id="outliers" class="modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Detecção de Outliers com Box Plot</h2>
+            <button class="close-btn" onclick="closeModal()">✕</button>
+        </div>
+        <div class="toggle-buttons">
+            <button class="toggle-btn active" onclick="toggleContent('outliers', 'tecnico')">📖 Técnico</button>
+            <button class="toggle-btn" onclick="toggleContent('outliers', 'eli12')">👶 ELI12</button>
+        </div>
+        <div id="outliers-tecnico" class="content-text active">
+            <h3>O que são Outliers?</h3>
+            <p>Outliers são valores extremamente diferentes da distribuição normal dos dados.</p>
+            <h3>Método IQR (Intervalo Interquartil)</h3>
+            <ul>
+                <li><strong>Q1:</strong> Percentil 25%</li>
+                <li><strong>Q3:</strong> Percentil 75%</li>
+                <li><strong>IQR:</strong> Q3 - Q1</li>
+                <li><strong>Limite inferior:</strong> Q1 - 1.5 × IQR</li>
+                <li><strong>Limite superior:</strong> Q3 + 1.5 × IQR</li>
+            </ul>
+            <h3>Interpretação</h3>
+            <p>Valores fora desses limites são candidatos a outliers.</p>
+            <p>Exemplo: <code>cliente.tempo_servico</code> máximo de 1080 meses = 90 anos (improvável para um cliente ativo).</p>
+            <h3>Decisão</h3>
+            <p>Remover ou investigar causa, dependendo do contexto do negócio.</p>
+        </div>
+        <div id="outliers-eli12" class="content-text">
+            <h3>Explicação Simples (ELI12)</h3>
+            <p>Outliers são valores muito estranhos que saem do padrão.</p>
+            <p>Imagina a altura das pessoas: maioria tem 1,70m. Mas se alguém tiver 5 metros de altura, é muito estranho!</p>
+            <h3>O Box Plot</h3>
+            <p>É um desenho que mostra:</p>
+            <ul>
+                <li>Onde a maioria dos dados está (caixa)</li>
+                <li>Os pontos estranhos (bolinhas isoladas)</li>
+            </ul>
+            <p>Aí você decide: esse valor é real ou foi erro ao digitar?</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="sobre">
+    <p>📊 Site de Estudos em Limpeza e Tratamento de Dados para Machine Learning</p>
+    <div class="footer-info">
+        <p>✨ Design Cyberpunk Neon | 🔬 Conteúdo Técnico e ELI12 | 👨‍💻 criado por Lucas Farias</p>
+        <p style="margin-top: 1rem; color: var(--neon-cyan);">Bem-vindo ao futuro da análise de dados ⚡</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
